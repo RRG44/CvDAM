@@ -5,14 +5,14 @@ function App() {
   return (
     <View style={styles.container}>
       <ScrollView>
-      <View style = {[styles.cover, {padding : 0}]}>
-        <ImageBackground source={require("./assets/qro.jpg")} style = {[styles.imageCover, {padding : 0}]} resizeMode = 'stretch'>
-          <View>
-            <Text style = {styles.h1}>Hello, I'm Gerardo</Text>
-            <Text style = {styles.h2}>Mobile Developer</Text>
-          </View>
-        </ImageBackground>
-      </View>
+        <View style = {styles.cover}>
+          <ImageBackground source={require("./assets/qro.jpg")} style = {styles.imageCover} resizeMode = 'stretch'>
+            <View>
+              <Text style = {styles.h1}>Hello, I'm Gerardo</Text>
+              <Text style = {styles.h2}>Mobile Developer</Text>
+            </View>
+          </ImageBackground>
+        </View>
         <View style = {styles.contentContainer}>
           <View>
             <Text style = {[styles.h3, {textAlign : 'center'}]}>About Me</Text>
@@ -86,6 +86,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     padding : 0,
+    margin : 0,
+    width : '100%',
   },
   cover : {
     flex: 1,
@@ -94,21 +96,25 @@ const styles = StyleSheet.create({
     justifyContent : 'center',
     alignItems: 'center',
     padding : 0,
+    margin : 0,
   },
   imageCover : {
     flex: 1,
     width : '100%',
     justifyContent : 'center',
     alignItems: 'center',
+    padding : 0,
+    margin : 0,
   },
   imageMe : {
     height : 200,
     width : 200,
     borderRadius : 100,
+    marginVertical : 20,
   }
   ,
   contentContainer : {
-    padding : 10,
+    padding : 25,
   }
   ,
   h1 : {
@@ -133,8 +139,7 @@ const styles = StyleSheet.create({
     fontSize : 16,
     fontWeight : "normal",
     color : "#000",
-    paddingVertical : 10,
-    lineHeight : 24,
+    lineHeight : 30,
   }
 });
 
