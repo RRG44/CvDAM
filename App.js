@@ -43,8 +43,8 @@ const ListLang = ( ) => {
   return (
     <View>
       <Text style = {styles.h3}>Languages</Text>
-      {data.map((item) => (
-        <Text style={[styles.txt, { color: item.key[1] }]}>
+      {data.map((item, index) => (
+        <Text key = {index} style = {[styles.txt, { color: item.key[1] }]}>
           <Text style = {[{fontWeight : 'bold'}]}>{'    '}• {item.key[2]} </Text>{item.key[0]}
         </Text>
       ))}
