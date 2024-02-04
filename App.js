@@ -8,7 +8,7 @@ function App() {
         <View style = {styles.cover}>
           <ImageBackground source={require("./assets/qro.jpg")} style = {styles.imageCover} resizeMode = 'stretch'>
             <View>
-              <Text style = {styles.h1}>Hello, I'm Gerardo</Text>
+              <Text style = {styles.h1}>Hello!, I'm Gerardo</Text>
               <Text style = {styles.h2}>Mobile Developer</Text>
             </View>
           </ImageBackground>
@@ -70,11 +70,12 @@ const ListSoftSk = () => {
   return(
     <View>
       <Text style = {styles.h3}>Soft Skills</Text>
-      <Text style = {styles.txt}>{'    '}• Proactivo</Text>
-      <Text style = {styles.txt}>{'    '}• Curioso y con ganas de aprender</Text>
-      <Text style = {styles.txt}>{'    '}• Trabajo en equipo</Text>
-      <Text style = {styles.txt}>{'    '}• Resilencia</Text>
-      <Text style = {styles.txt}>{'    '}• Me adapto</Text>
+      <Text style = {styles.txt}>{'    '}• Proactive</Text>
+      <Text style = {styles.txt}>{'    '}• Curious</Text>
+      <Text style = {styles.txt}>{'    '}• Pasionate about learning</Text>
+      <Text style = {styles.txt}>{'    '}• Good at working in teams</Text>
+      <Text style = {styles.txt}>{'    '}• Resilient</Text>
+      <Text style = {styles.txt}>{'    '}• I dapt to circumstances</Text>
     </View>
   );
 }
