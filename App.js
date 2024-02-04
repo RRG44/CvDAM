@@ -5,8 +5,8 @@ function App() {
   return (
     <View style={styles.container}>
       <ScrollView>
-      <View style = {styles.cover}>
-        <ImageBackground source={require("./assets/qro.jpg")} style = {styles.imageCover} resizeMode = 'stretch'>
+      <View style = {[styles.cover, {padding : 0}]}>
+        <ImageBackground source={require("./assets/qro.jpg")} style = {[styles.imageCover, {padding : 0}]} resizeMode = 'stretch'>
           <View>
             <Text style = {styles.h1}>Hello, I'm Gerardo</Text>
             <Text style = {styles.h2}>Mobile Developer</Text>
@@ -19,9 +19,8 @@ function App() {
             <View style = {[{alignItems : 'center'}]}>
               <Image source = {require("./assets/me.jpg")} style = {styles.imageMe}/>
             </View>
-            <Text style = {styles.txt}>¡Hola! Mi nombre es Gerardo Ramírez y soy desarrollador full stack y desarrollador móvil. Actualmente estoy formándome como profesional en la carrera de Ingeniería en Software.
-            {"\n"}A parte de mi carrera soy apasionado a aprender cosas y leer sobre varios temas, entre mis favoritos están los idiomas, la ciencia, las finanzas e inversiones, pero sobre todo la música (practico guitarra, bajo, teclado y tengo una manía por crear playlists para todo, así como por escuchar y descubrir nueva música). También me encanta cocinar, sobre todo galletas, panes o pasteles. Cada semana planeo mis comidas junto con mis rutinas para cuidar mi salud. Me gustan más los gatos que los perros. Y mi serie favorita de todos los tiempos es Malcom in the middle. Me encanta estar con mis amigos y familia, ya sea hablando, pasándola bien, en un concierto o jugando cartas o algún otro juego.
-            </Text>
+            <Text style = {styles.txt}> Hi! I'm Gerardo. I'm a full stack and mobile developer. Currently studying Software Engineer in the Autonomus University of Queretaro.
+            {"\n"}I'm someone who is really pasionate about learning and reading new things about a variety of topics, computer science, languages, sciences and finance are among my favourites. I also enyoing listening and playing music.            </Text>
           </View>
           <ListTech />            
           <ListLang />
@@ -94,6 +93,7 @@ const styles = StyleSheet.create({
     height : 300,
     justifyContent : 'center',
     alignItems: 'center',
+    padding : 0,
   },
   imageCover : {
     flex: 1,
