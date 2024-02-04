@@ -14,16 +14,18 @@ function App() {
         </ImageBackground>
       </View>
         <View style = {styles.contentContainer}>
-          <Text style = {[styles.h3, {textAlign : 'center'}]}>About Me</Text>
-          <View style = {[{alignItems : 'center'}]}>
-            <Image source = {require("./assets/me.jpg")} style = {styles.imageMe}/>
+          <View>
+            <Text style = {[styles.h3, {textAlign : 'center'}]}>About Me</Text>
+            <View style = {[{alignItems : 'center'}]}>
+              <Image source = {require("./assets/me.jpg")} style = {styles.imageMe}/>
+            </View>
+            <Text style = {styles.txt}>¡Hola! Mi nombre es Gerardo Ramírez y soy desarrollador full stack y desarrollador móvil. Actualmente estoy formándome como profesional en la carrera de Ingeniería en Software.
+            {"\n"}A parte de mi carrera soy apasionado a aprender cosas y leer sobre varios temas, entre mis favoritos están los idiomas, la ciencia, las finanzas e inversiones, pero sobre todo la música (practico guitarra, bajo, teclado y tengo una manía por crear playlists para todo, así como por escuchar y descubrir nueva música). También me encanta cocinar, sobre todo galletas, panes o pasteles. Cada semana planeo mis comidas junto con mis rutinas para cuidar mi salud. Me gustan más los gatos que los perros. Y mi serie favorita de todos los tiempos es Malcom in the middle. Me encanta estar con mis amigos y familia, ya sea hablando, pasándola bien, en un concierto o jugando cartas o algún otro juego.
+            </Text>
           </View>
-          <Text style = {styles.txt}>¡Hola! Mi nombre es Gerardo Ramírez y soy desarrollador full stack y desarrollador móvil. Actualmente estoy formándome como profesional en la carrera de Ingeniería en Software.
-          {"\n"}A parte de mi carrera soy apasionado a aprender cosas y leer sobre varios temas, entre mis favoritos están los idiomas, la ciencia, las finanzas e inversiones, pero sobre todo la música (practico guitarra, bajo, teclado y tengo una manía por crear playlists para todo, así como por escuchar y descubrir nueva música). También me encanta cocinar, sobre todo galletas, panes o pasteles. Cada semana planeo mis comidas junto con mis rutinas para cuidar mi salud. Me gustan más los gatos que los perros. Y mi serie favorita de todos los tiempos es Malcom in the middle. Me encanta estar con mis amigos y familia, ya sea hablando, pasándola bien, en un concierto o jugando cartas o algún otro juego.
-          </Text>
           <ListTech />            
           <ListLang />
-          <Text style = {styles.h3}>Soft Skills</Text>
+          <ListSoftSk />
         </View>
       </ScrollView>
       <StatusBar style="auto" />
@@ -33,10 +35,10 @@ function App() {
 
 const ListLang = ( ) => {
   const data = [
-    { key: ["Spanish 🇲🇽", "#095f44"] },
-    { key: ["English 🇺🇸", "#cf2335"] },
-    { key: ["French 🇫🇷", "#0a4f8f"] },
-    { key: ["Italian 🇮🇹", "#088042"] },
+    { key: ["Spanish 🇲🇽", "#095f44", "Native"] },
+    { key: ["English 🇺🇸", "#cf2335", "B2"] },
+    { key: ["French 🇫🇷", "#0a4f8f", "A1"] },
+    { key: ["Italian 🇮🇹", "#088042", "A1"] },
   ];
 
   return (
@@ -44,7 +46,7 @@ const ListLang = ( ) => {
       <Text style = {styles.h3}>Languages</Text>
       {data.map((item) => (
         <Text style={[styles.txt, { color: item.key[1] }]}>
-          {'    '}• {item.key[0]}
+          <Text style = {[{fontWeight : 'bold'}]}>{'    '}• {item.key[2]} </Text>{item.key[0]}
         </Text>
       ))}
     </View>
@@ -65,6 +67,19 @@ const ListTech = () => {
   );
 }
 
+const ListSoftSk = () => {
+  return(
+    <View>
+      <Text style = {styles.h3}>Soft Skills</Text>
+      <Text style = {styles.txt}>{'    '}• Java, JavaScript, Python, C++ and C#</Text>
+      <Text style = {styles.txt}>{'    '}• Web: HTML, CSS, PHP and Bootstrap</Text>
+      <Text style = {styles.txt}>{'    '}• MySQL, PL/SQL and Access</Text>
+      <Text style = {styles.txt}>{'    '}• Git and GitHub</Text>
+      <Text style = {styles.txt}>{'    '}• Xampp</Text>
+      <Text style = {styles.txt}>{'    '}• React Native</Text>
+    </View>
+  );
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -120,6 +135,7 @@ const styles = StyleSheet.create({
     fontWeight : "normal",
     color : "#000",
     paddingVertical : 10,
+    lineHeight : 24,
   }
 });
 
