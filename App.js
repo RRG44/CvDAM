@@ -71,12 +71,11 @@ const ListSoftSk = () => {
   return(
     <View>
       <Text style = {styles.h3}>Soft Skills</Text>
-      <Text style = {styles.txt}>{'    '}• Java, JavaScript, Python, C++ and C#</Text>
-      <Text style = {styles.txt}>{'    '}• Web: HTML, CSS, PHP and Bootstrap</Text>
-      <Text style = {styles.txt}>{'    '}• MySQL, PL/SQL and Access</Text>
-      <Text style = {styles.txt}>{'    '}• Git and GitHub</Text>
-      <Text style = {styles.txt}>{'    '}• Xampp</Text>
-      <Text style = {styles.txt}>{'    '}• React Native</Text>
+      <Text style = {styles.txt}>{'    '}• Proactivo</Text>
+      <Text style = {styles.txt}>{'    '}• Curioso y con ganas de aprender</Text>
+      <Text style = {styles.txt}>{'    '}• Trabajo en equipo</Text>
+      <Text style = {styles.txt}>{'    '}• Resilencia</Text>
+      <Text style = {styles.txt}>{'    '}• Me adapto</Text>
     </View>
   );
 }
