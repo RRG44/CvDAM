@@ -20,7 +20,7 @@ function App() {
               <Image source = {require("./assets/me.jpg")} style = {styles.imageMe}/>
             </View>
             <Text style = {styles.txt}> Hi! I'm Gerardo. I'm a full stack and mobile developer. Currently studying Software Engineer in the Autonomus University of Queretaro.
-            {"\n"}I'm someone who is really pasionate about learning and reading new things about a variety of topics, computer science, languages, sciences and finance are among my favourites. I also enyoing listening and playing music.            </Text>
+            {"\n"}I'm someone who is really pasionate about learning and reading new things. I enjoy a big variety of topics but computer science, languages, hard sciences and finance are among my favourites. I also enyoing listening and playing music.</Text>
           </View>
           <ListTech />            
           <ListLang />
